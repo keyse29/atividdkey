@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Codigos C++</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Principal</a>|
+        <a href="tinkercad.html">Tinkercad</a>|
+        <a href="c++.html">C++</a>|
+        <a href="java.html">Java</a>
+    </nav><br>
+    <h1>Descrição da linguagem de programação C++</h1>
+    <p>
+        C++ é uma linguagem de programação e é a mais utilizada pelos desenvolvedores, ela permite que os desenvolvedores escrevam programas complexos. C++ é uma linguagem de programação criada por Bjarne Stroustrup nos anos 1980 como uma extensão da linguagem C. Destaca-se pelo alto desempenho, portabilidade entre sistemas operacionais que oferece estruturas de dados e algoritmos prontos. C++ é flexível, permitindo diferentes paradigmas de programação, e é amplamente utilizado em áreas como desenvolvimento de sistemas, jogos e aplicações financeiras.</p>
+        <br>
+        <h2></h2>
+        <div>
+            <img src="expcodc++.png" alt="codigo c++"><br>
+        </div>
+        <br>
+        <h2>Exemplo de codigo C++</h2>
+    <div>
+        <pre>
+            // C++ code
+//
+int pot1 = 0;
+
+int pot2 = 0;
+
+int res = 0;
+
+void setup()
+{
+  pinMode(12, OUTPUT);
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+  pinMode(A1, INPUT);
+
+  pot1 = 0;
+  pot2 = 0;
+  res = 0;
+  digitalWrite(12, LOW);
+}
+
+void loop()
+{
+  pot1 += analogRead(A0);
+  Serial.println("pot1 ------------------------------");
+  Serial.println(pot1);
+  pot2 += analogRead(A1);
+  Serial.println("pot2 ------------------------------");
+  Serial.println(pot2);
+  if (pot1 > pot2) {
+    res += (pot1 + pot2);
+    Serial.println("res ---------------------------");
+    Serial.println(res);
+    digitalWrite(12, HIGH);
+  } else {
+    digitalWrite(12, LOW);
+  }
+  delay(1); // Wait for 1 millisecond(s)
+}
+        </pre>
+    </div>
+</body>
+</html>
